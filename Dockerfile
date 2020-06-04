@@ -1,7 +1,7 @@
 FROM openjdk:15-slim
 
 RUN apt-get update && apt-get upgrade
-RUN apt-get install wget unzip curl git
+RUN apt-get install -y wget unzip curl git
 RUN mkdir -p /opt
 
 RUN cd /opt \
