@@ -1,7 +1,7 @@
-FROM openjdk:15-alpine
+FROM openjdk:15-slim
 
-RUN apk update && apk upgrade
-RUN apk add --update --no-cache wget unzip curl git
+RUN apt-get update && apt-get upgrade
+RUN apt-get install wget unzip curl git
 RUN mkdir -p /opt
 
 RUN cd /opt \
